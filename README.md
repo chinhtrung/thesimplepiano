@@ -1,1 +1,2 @@
-# thesimplepiano.github.io
+# Click here for the demo
+[chinhtrung.github.io/thesimplepiano/](https://chinhtrung.github.io/thesimplepiano/)
