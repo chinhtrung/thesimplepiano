@@ -1,0 +1,275 @@
+/* Acknowledgement
+this design is taken from the following codepen posts 
+https://codepen.io/amit_sheen/details/gOmXoVO
+https://codepen.io/evilpaper/pen/dyyZjLQ */
+
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+}
+.layout-keyboard {
+    /* background-color: #345; */
+    background-color:black;
+    color: #fff;
+    min-height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    perspective: 35em;
+}
+
+@media (min-width: 1300px) {
+    .layout-keyboard {
+        font-size: 1.8em;
+    }
+}
+
+@media (min-width: 1800px) {
+    .layout-keyboard {
+        font-size: 2em;
+    }
+}
+
+/* @media (max-width: 1200px) {
+    .layout-keyboard {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 1300px) {
+    .layout-keyboard {
+        font-size: 1.5em;
+    }
+} */
+
+.keyboard {
+    position: relative;
+    transform: rotateX(60deg);
+    cursor: pointer;
+}
+.key > * {
+    position: absolute;
+}
+.key::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0.5em;
+    height: 0.5em;
+    transform: translateX(-50%) rotateX(120deg) translateY(0.25em);
+    clip-path: polygon(25% 100%, 75% 100%, 75% 50%, 100% 50%, 50% 0, 0 50%, 25% 50%);
+    transform-origin: top;
+    transition: opacity 0.2s;
+    opacity: 0;
+}
+.white {
+    position: absolute;
+    width: calc(1em - 1px);
+    height: 5em;
+    background-image: linear-gradient(#eee, #fff);
+    transform-origin: top;
+    transition: all 0.2s;
+}
+
+/* original */
+/* .white:hover {
+    transform: rotateX(-4.2deg);
+}
+.white:hover::after {
+    opacity: 1;
+    background-color: #fff 7;
+} */
+/* end original */
+
+
+/* add */
+.white-press {
+    transform: rotateX(-4.2deg);
+}
+.white-press::after{
+    opacity: 1;
+    background-color: #fff 7;
+}
+
+/*end add */
+
+.white .front {
+    width: 100%;
+    height: 0.75em;
+    top: 100%;
+    background-color: #eee;
+    background-image: linear-gradient(#fff, #aaa);
+    transform: rotateX(-90deg);
+    transform-origin: top;
+}
+.white .left {
+    width: 0.75em;
+    height: 100%;
+    background-image: linear-gradient(90deg, #888, #444);
+    transform: rotateY(90deg);
+    transform-origin: left;
+}
+.white .right {
+    width: 0.75em;
+    height: 100%;
+    right: 0;
+    background-image: linear-gradient(90deg, #444, #888);
+    transform: rotateY(-90deg);
+    transform-origin: right;
+}
+.black {
+    position: absolute;
+    width: calc(0.5em - 1px);
+    height: 3em;
+    background-image: linear-gradient(#333, #111);
+    transform: translateZ(0.25em);
+    transform-origin: top;
+    transition: transform 0.2s;
+}
+
+/* original */
+/* .black:hover {
+    transform: translateZ(0.25em) rotateX(-4.2deg);
+}
+.black:hover::after {
+    opacity: 1;
+    background-color: #000 7;
+} */
+/* end original */
+
+/* add */
+.black-press {
+    transform: translateZ(0.25em) rotateX(-4.2deg);
+}
+
+.black-press::after {
+    opacity: 1;
+    background-color: #000 7;
+}
+/* end add */
+
+.black .front {
+    width: 100%;
+    height: 1.4em;
+    top: 100%;
+    background-color: #f00;
+    background-image: linear-gradient(#333, #000);
+    transform: rotateX(-45deg);
+    transform-origin: top;
+}
+.black .left {
+    width: 1em;
+    height: calc(100% + 1em);
+    background-image: linear-gradient(90deg, #222, #000);
+    transform: rotateY(90deg);
+    transform-origin: left;
+    clip-path: polygon(0 0, 0 3em, 100% 100%, 100% 0);
+}
+.black .right {
+    width: 1em;
+    height: calc(100% + 1em);
+    right: 0;
+    background-image: linear-gradient(90deg, #000, #222);
+    transform: rotateY(-90deg);
+    transform-origin: right;
+    clip-path: polygon(0 0, 0 100%, 100% 3em, 100% 0);
+}
+.C {
+    left: calc(var(--leftOffset) + 0em);
+}
+.Db {
+    left: calc(var(--leftOffset) + 0.75em);
+}
+.D {
+    left: calc(var(--leftOffset) + 1em);
+}
+.Eb {
+    left: calc(var(--leftOffset) + 1.75em);
+}
+.E {
+    left: calc(var(--leftOffset) + 2em);
+}
+.F {
+    left: calc(var(--leftOffset) + 3em);
+}
+.Gb {
+    left: calc(var(--leftOffset) + 3.75em);
+}
+.G {
+    left: calc(var(--leftOffset) + 4em);
+}
+.Ab {
+    left: calc(var(--leftOffset) + 4.75em);
+}
+.A {
+    left: calc(var(--leftOffset) + 5em);
+}
+.Bb {
+    left: calc(var(--leftOffset) + 5.75em);
+}
+.B {
+    left: calc(var(--leftOffset) + 6em);
+}
+
+/* .octave1 {
+    --leftOffset: -10.5em;
+}
+
+.octave2 {
+    --leftOffset: -3.5em;
+}
+.octave3 {
+    --leftOffset: 3.5em;
+}
+.octave4 {
+    --leftOffset: 10.5em;
+} */
+
+
+/* setting for full 7 octave */
+/* .octave1 {
+    --leftOffset: -25em;
+}
+
+.octave2 {
+    --leftOffset: -18em;
+}
+.octave3 {
+    --leftOffset: -11em;
+}
+.octave4 {
+    --leftOffset: -4em;
+}
+.octave5 {
+    --leftOffset: 3em;
+}
+.octave6 {
+    --leftOffset: 10em;
+}
+.octave7 {
+    --leftOffset: 17em;
+} */
+
+.octave2 {
+    --leftOffset: -21em;
+}
+.octave3 {
+    --leftOffset: -14em;
+}
+.octave4 {
+    --leftOffset: -7em;
+}
+.octave5 {
+    --leftOffset: 0em;
+}
+.octave6 {
+    --leftOffset: 7em;
+}
+.octave7 {
+    --leftOffset: 14em;
+}

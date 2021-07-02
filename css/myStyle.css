@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+}
+
+.header-title{
+    color: mintcream;
+    /* text-transform: uppercase; */
+    /* font-size: 2em;
+    letter-spacing: 0.3em; */
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    /* font-weight: 500; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Piano</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.js"></script>
+    <link rel="stylesheet" href="./css/piano.css">
+    <link rel="stylesheet" href="./css/typingKeyboard.css">
+    <link rel="stylesheet" href="./css/myStyle.css">
+</head>
+<body>
+    <h1 class="header-title">
+        The Simple Piano
+    </h1>
+    <div class="piano">
+        <div class="layout-keyboard">
+            <div class="keyboard">
+                <!-- <div class="key white C  octave1"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Db octave1"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white D  octave1"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Eb octave1"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white E  octave1"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white F  octave1"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Gb octave1"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white G  octave1"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Ab octave1"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white A  octave1"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Bb octave1"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white B  octave1"><div class="left"></div><div class="right"></div><div class="front"></div></div> -->
+
+                <div class="key white C  octave2"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Db octave2"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white D  octave2"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Eb octave2"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white E  octave2"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white F  octave2"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Gb octave2"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white G  octave2"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Ab octave2"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white A  octave2"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Bb octave2"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white B  octave2"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+
+                <div class="key white C  octave3"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Db octave3"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white D  octave3"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Eb octave3"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white E  octave3"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white F  octave3"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Gb octave3"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white G  octave3"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Ab octave3"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white A  octave3"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Bb octave3"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white B  octave3"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                
+                <div class="key white C  octave4"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Db octave4"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white D  octave4"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Eb octave4"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white E  octave4"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white F  octave4"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Gb octave4"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white G  octave4"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Ab octave4"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white A  octave4"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Bb octave4"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white B  octave4"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+
+                <div class="key white C  octave5"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Db octave5"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white D  octave5"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Eb octave5"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white E  octave5"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white F  octave5"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Gb octave5"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white G  octave5"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Ab octave5"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white A  octave5"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Bb octave5"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white B  octave5"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+
+                <div class="key white C  octave6"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Db octave6"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white D  octave6"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Eb octave6"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white E  octave6"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white F  octave6"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Gb octave6"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white G  octave6"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Ab octave6"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white A  octave6"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Bb octave6"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white B  octave6"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+
+                <div class="key white C  octave7"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Db octave7"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white D  octave7"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Eb octave7"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white E  octave7"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white F  octave7"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Gb octave7"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white G  octave7"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Ab octave7"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white A  octave7"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key black Bb octave7"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+                <div class="key white B  octave7"><div class="left"></div><div class="right"></div><div class="front"></div></div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="computer-keyboard">
+        <h1 class="title">Your keyboard, your piano</h1>
+        <div class="type-keyboard">
+        <ul class="row row-0">
+            <li class="pinky" id="Backquote">`</li>
+            <li class="pinky" id="Digit1">1</li>
+            <li class="ring" id="Digit2">2</li>
+            <li class="middle" id="Digit3">3</li>
+            <li class="pointer1st" id="Digit4">4</li>
+            <li class="pointer2nd" id="Digit5">5</li>
+            <li class="pointer2nd" id="Digit6">6</li>
+            <li class="pointer1st" id="Digit7">7</li>
+            <li class="middle" id="Digit8">8</li>
+            <li class="ring" id="Digit9">9</li>
+            <li class="pinky" id="Digit0">0</li>
+            <li class="pinky" id="Minus">-</li>
+            <li class="pinky" id="Equal">+</li>
+            <li class="pinky" id="Backspace">BACK</li>
+        </ul>
+        <ul class="row row-1">
+            <li class="pinky" id="Tab">TAB</li>
+            <li class="pinky" id="KeyQ">Q</li>
+            <li class="ring" id="KeyW">W</li>
+            <li class="middle" id="KeyE">E</li>
+            <li class="pointer1st" id="KeyR">R</li>
+            <li class="pointer2nd" id="KeyT">T</li>
+            <li class="pointer2nd" id="KeyY">Y</li>
+            <li class="pointer1st" id="KeyU">U</li>
+            <li class="middle" id="KeyI">I</li>
+            <li class="ring" id="KeyO">O</li>
+            <li class="pinky" id="KeyP">P</li>
+            <li class="pinky" id="BracketLeft">[</li>
+            <li class="pinky" id="BracketRight">]</li>
+            <li class="pinky" id="Backslash">\</li>
+        </ul>
+        <ul class="row row-2">
+            <li class="pinky" id="CapsLock">CAPS</li>
+            <li class="pinky" id="KeyA">A</li>
+            <li class="ring" id="KeyS">S</li>
+            <li class="middle" id="KeyD">D</li>
+            <li class="pointer1st" id="KeyF">F</li>
+            <li class="pointer2nd" id="KeyG">G</li>
+            <li class="pointer2nd" id="KeyH">H</li>
+            <li class="pointer1st" id="KeyJ">J</li>
+            <li class="middle" id="KeyK">K</li>
+            <li class="ring" id="KeyL">L</li>
+            <li class="pinky" id="Semicolon">:</li>
+            <li class="pinky" id="Quote">''</li>
+            <li class="pinky" id="Enter">ENTER</li>
+        </ul>
+        <ul class="row row-3">
+            <li class="pinky" id="ShiftLeft">SHIFT</li>
+            <li class="pinky" id="KeyZ">Z</li>
+            <li class="ring" id="KeyX">X</li> 
+            <li class="middle" id="KeyC">C</li>
+            <li class="pointer1st" id="KeyV">V</li>
+            <li class="pointer2nd" id="KeyB">B</li>
+            <li class="pointer2nd" id="KeyN">N</li>
+            <li class="pointer1st" id="KeyM">M</li>
+            <li class="middle" id="Comma">,</li>
+            <li class="ring" id="Period">.</li>
+            <li class="pinky" id="Slash">;</li>
+            <li class="pinky" id="ShiftRight">SHIFT</li>
+        </ul>
+        <ul class="row row-4">
+            <li class="pinky" id="Space">Space</li>
+        </ul>
+        </div>
+    </div>
+
+    <script src="./js/data.js"> </script>
+    <script src="./js/app.js"> </script>
+</body>
+</html>
